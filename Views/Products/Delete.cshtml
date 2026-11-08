@@ -1,0 +1,13 @@
+@model M8E1.Model.Product
+<div class="alert alert-danger">Are you sure you want to delete this product?</div >
+
+<div>
+    <p><strong>Name: </strong>@Model.Name</p>
+    <P><strong>Price: </strong>@Model.Price</P>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id">
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
